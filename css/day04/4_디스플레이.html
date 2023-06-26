@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디스플레이</title>
+    <style>
+        span {
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            background-color: black;
+            border-radius: 50%;
+        }
+
+        ul>li {
+            display: inline-block;
+        }
+        
+         .none>p {
+            display: none;
+        }
+        
+        .hidden>p {
+            /* visibility: hidden; */
+            opacity: 0.5; 
+            /* 투명도 0~1 */
+        }
+        
+        div {
+            margin: 16px;
+            background-color: rgba(0, 0, 0, 0.1);
+            /* 배경을 투명하게 바꿀 때는 안에 있는 컨텐츠를 투명하게 만들지 않을 때 */
+        }
+    </style>
+</head>
+
+<body>
+    <span></span> 글을 쓰고싶어요
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <div class="none">
+        Lorem ipsum dolor sit amet, <p>consectetur adipisicing elit. Delectus dolorem quidem nulla, 
+        deleniti officia, aspernatur </p>similique sint non vitae consectetur, 
+        voluptates perferendis. Perspiciatis, architecto fuga! Inventore omnis quis nam fugiat.
+    </div>
+    <div class="hidden">
+        Lorem ipsum dolor sit amet, <p>consectetur adipisicing elit. Delectus dolorem quidem nulla, 
+        deleniti officia, aspernatur </p>similique sint non vitae consectetur, 
+        voluptates perferendis. Perspiciatis, architecto fuga! Inventore omnis quis nam fugiat.
+    </div>
+</body>
+
+</html>
