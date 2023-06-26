@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      setTimeout(function () {
+        const randNum = Math.floor(Math.random() * 100) + 1;
+
+        console.log('정답 숫자는 ' + randNum + '입니다!');
+
+        var L = 1;
+        var H = 100;
+        var cnt = 0;
+
+        while (true) {
+          cnt++;
+          var input = parseInt(prompt(L + '~' + H + '까지 정수 입력 ㄱㄱ'));
+
+          if (randNum == input) {
+            alert('정답입니다!');
+            break;
+          } else if (randNum < input) {
+            alert('DOWN');
+            H = input - 1;
+          } else {
+            alert('UP');
+            L = input + 1;
+          }
+
+          // if(randNum > input){
+          //     alert('올려보소 ㅋ');
+          // }
+          // else if(randNum < input){
+          //     alert('내려보소 ㅋ');
+          // }
+          // else if(randNum == input){
+          //     alert('증답 입니다이~~');
+          //     break;
+          // }
+        }
+
+        document.write('<h1>' + cnt + '번 만에 맞추셨습니다! </h1>');
+
+        // alert(cnt + '만에 맞춤 ㅋㅋ');
+      }, 3000); // 실행할 함수, 얼마나 기다릴지
+    </script>
+  </body>
+</html>
