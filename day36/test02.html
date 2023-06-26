@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #title {
+            width: 450px;
+            height: 30px;
+            margin: 5px;
+            background-color: lightpink;
+            cursor: pointer;
+            line-height: 30px;
+            text-align: center;
+        }
+
+        #content {
+            width: 450px;
+            height: 200px;
+            background-color: lightslategray;
+        }
+
+        span, img {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">주 먹 펴 고 일 어 나</div>
+    <div id="content">
+        <span>COM</span>
+        <img id="com" src="images/rock.png" alt="COM 이미지">
+        <span>ME</span>
+        <img id="me" src="images/rock.png" alt="ME 이미지">
+    </div>
+
+    <script>
+        document.querySelector('#title').onclick = function(){
+            if(this.firstChild.nodeValue == '주 먹 펴 고 일 어 나'){
+                this.firstChild.nodeValue = '보 고 싶 나';
+                this.style.backgroundColor = 'crimson';
+                this.style.color = 'black';
+
+                play();
+            }
+            else {
+                this.firstChild.nodeValue = '주 먹 펴 고 일 어 나';
+                this.style.backgroundColor = 'lightpink';
+                this.style.color = 'white';
+
+                stop();
+            }
+        };
+
+        function play(){
+            document.querySelector('#com').src = 'images/가위바위보.gif';
+            document.querySelector('#me').src = 'images/가위바위보.gif';
+        }
+
+        function stop(){
+            var comNum = Math.floor(Math.random() * 3) + 1;
+            var meNum = Math.floor(Math.random() * 3) + 1;
+
+            document.querySelector('#com').src = 'images/가위바위보0' + comNum + '.png';
+            document.querySelector('#me').src = 'images/가위바위보0' + meNum + '.png';
+
+            setTimeout(function(){
+                if(comNum == meNum){
+                    alert('비겨 부렀으~~~');
+                }
+                else if((comNum - meNum == -1) || (comNum - meNum == 2)) { // 비겼는데? 
+                    alert('져 부렀으...');
+                }
+                else {
+                    alert('이겨 부렀으!!!');
+                }
+            }, 1000);
+        }
+
+
+    </script>
+</body>
+</html>

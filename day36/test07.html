@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이벤트</title>
+    <style>
+        .box {
+            background: lightslategray;
+            padding: 10px;
+        }
+        </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            // $('.box').mouseover(function(){
+            //     $('.result').append('<p>마우스 오버 이벤트 발생!</p>');
+            // });
+            $('textarea').keydown(function(){
+                $('.result').text($(this).val());
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <textarea cols="5" rows="5"></textarea>
+
+    <!-- <div class="box">mouseover</div> -->
+
+    <hr>
+
+    <div class="result"></div>
+</body>
+</html>

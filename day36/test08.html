@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        margin: 50px;
+        margin: 0 auto;
+      }
+
+      .box {
+        width: 500px;
+        height: 500px;
+        background-color: lightsalmon;
+        margin-top: 10px;
+      }
+
+      /* div,
+      button {
+        margin: 5px;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        display: none;
+      } */
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $('.btn1').click(function () {
+          $('div').removeClass('box');
+        });
+        $('.btn2').click(function () {
+          $('div').addClass('box');
+        });
+        $('.btn3').click(function () {
+          $('div').toggleClass('box');
+        });
+      });
+
+      //   $(document).ready(function () {
+      //     $('#wrap button:eq(0)').click(function () {
+      //       $('#wrap .box').show();
+      //     });
+      //     $('#wrap button:eq(1)').click(function () {
+      //       $('#wrap .box').hide();
+      //     });
+      //     $('#wrap button:eq(2)').click(function () {
+      //       $('#wrap .box').toggle(500);
+      //     });
+      //   });
+    </script>
+  </head>
+  <body>
+    <button class="btn1">[버튼1]</button>
+    <button class="btn2">[버튼2]</button>
+    <button class="btn3">[버튼3]</button>
+
+    <div class="box"></div>
+
+    <!-- <div id="wrap">
+      <button>버튼1</button>
+      <button>버튼2</button>
+      <button>버튼3</button>
+      <div class="box">박스</div>
+    </div> -->
+  </body>
+</html>
