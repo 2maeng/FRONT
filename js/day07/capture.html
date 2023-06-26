@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body * {
+      margin: 10px;
+      border: 1px solid #00f;
+    }
+  </style>
+  <body>
+    <form>
+      FORM
+      <div>
+        DIV
+        <p>p</p>
+      </div>
+    </form>
+    <script>
+      const els = document.querySelectorAll('*');
+      for (let el of els) {
+        el.addEventListener(
+          'click',
+          function (e) {
+            alert(el.tagName);
+          },
+          false // true, flase 생략가능
+        );
+      }
+    </script>
+  </body>
+</html>

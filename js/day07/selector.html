@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+    <script>
+        window.onload = function () {;
+        const idDom = document.getElementById('id');
+        console.log('1', idDom);
+        };
+
+        function onPrintIdDom(){
+            const idDom = document.getElementById('id');
+            console.log('2', idDom);
+        }
+
+        onPrintIdDom(); // 2, null
+        // 단, 이벤트를 실행 시에 실행하는 함수는 이미 html이 로드되어있는 상태이기 때문에
+        // 위에 선언해도 사용가능
+    </script>
+</head>
+<body> 
+    <div id="id">ID</div>
+    <div class="class">CLASS</div>
+</body>
+<script>
+    const idDom = document.getElementById('id');
+    const idSelector = document.querySelector('#id');
+    console.log('id', idDom, idSelector);
+
+    const classDom = document.getElementsByClassName('class');
+    const classSelector = document.querySelector('.class');
+    const classSelectorAll = document.querySelectorAll('.class');
+    console.log('class', classDom, classSelector, classSelectorAll);
+
+    const TagName = document.getElementsByTagName('div');
+    console.log('tag', TagName);
+</script>
+</html>

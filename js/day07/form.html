@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form action="#">
+        <p><input name="user_email" /></p>
+        <p><input name="user_pw" /></p>
+        <button>로그인</button>
+    </form>
+    <script>
+        const onLogin = (e) => {
+            e.preventDefault();
+            // form 태그의 기본 성질 막기
+            const emailInput = document.querySelector('[name="user_emai"l]');
+            const passwordInput = document.querySelector('[name="user_pw"]');
+            console.log(emailInput.value, passwordInput.value);
+        };
+
+        const form = document.getElementsByTagName('form')[0];
+        form.addEventListener('submit', onLogin);
+    </script>
+</body>
+</html>
